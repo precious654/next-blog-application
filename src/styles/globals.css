@@ -6,4 +6,10 @@
 
 body{
   font-size: 14px;
+  color: #333333;
+}
+
+.app{
+  inline-size: 90%;
+  margin: 0 auto;
 }

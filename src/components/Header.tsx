@@ -1,14 +1,6 @@
 import Link from "next/link";
-import styles from '@/styles/Home.module.css'
 import { Poppins } from "@next/font/google";
-import { Montserrat } from '@next/font/google'
-
-const montserrat = Montserrat(
-  { 
-    subsets: ['latin'],
-    weight: ['400'] 
-  }
-)
+import Button from "./Button";
 
 const poppins = Poppins(
     {
@@ -17,22 +9,20 @@ const poppins = Poppins(
     }
 )
 
-
-
 function Header() {
     return (
         <main className={poppins.className}>
-            <header className={styles.header}>
-                <h2>Bloger</h2>
-
+            <header>
+                <Link href='/' className="link"><h2>Bloger</h2></Link>
+                
                 <ul>
-                    <li><Link href='/' className={styles.link}>Overview</Link></li>
-                    <li><Link href='/' className={styles.link}>Add Post</Link></li>
+                    <li><Link href='/' className="link">Overview</Link></li>
+                    <li><Link href='/' className="link">Add Post</Link></li>
                 </ul>
 
                 <div>
-                    <button className={styles.button}>Sign Up</button>
-                    <button className={styles.button}>Log In</button>
+                    <Link href='/signup'><Button text="Sign Up"/></Link>
+                    <Link href='/login'><Button text="Log In"/></Link>
                 </div>
             </header>
         </main>

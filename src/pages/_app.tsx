@@ -1,4 +1,5 @@
 import '@/styles/globals.css'
+import '@/styles/general.scss'
 import type { AppProps } from 'next/app'
 import Layout from '@/components/Layout'
 import { Montserrat } from '@next/font/google'
